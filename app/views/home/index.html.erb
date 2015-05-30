@@ -1,3 +1,9 @@
 <h1>Home#index</h1>
-<p><%=Time.now%></p>
-<p><%=Date.today%></p>
+<p><%=@time%></p>
+<p><%=@today%></p>
+
+<% @photos.each do |photo| %>
+<div class="photo">
+  <a href="<%= photo_path(photo)%>"><%= photo.name%></a>
+</div>
+<% end %>

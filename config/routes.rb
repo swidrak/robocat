@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   root "home#index"
+  get "/photos", to: "home#index", as: "photos"
+  get "/photos/new", to: "home#new", as: "new_photo"
+  get "/photos/:id", to: "home#show", as: "photo"
+  post "/photos", to: "home#create"
   
-
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
